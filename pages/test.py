@@ -1,5 +1,5 @@
 import streamlit as st
-import leafmap.leafmap as leafmap
+import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
@@ -18,9 +18,11 @@ st.title("Split-panel Map")
 with st.expander("See source code"):
     with st.echo():
         m = leafmap.Map()
-        m.add_raster("./cut_2015_ailiao.tif",cmap="Reds_r", layer_name="landslides", nodata=0, zoom_to_layer=True)
+        #m.add_raster("cut_2015_ailiao.tif",cmap="Reds_r", layer_name="landslides", nodata=0, zoom_to_layer=True)
+        m.add_basemap(basemap='HYBRID')
         m.set_center(120.7254,22.7474, zoom=11)
-        m.split_map( right_layer="Google Satellite",
+        m.split_map(left_layer="https://github.com/a42123212/shareable/releases/download/test/cut_2015_ailiao.tif",
+            right_layer="HYBRID",
               left_label="Landslide", 
               right_label="landscope")
-m.to_streamlit(height=700)
+m.to_streamlit(height=700,width=800)
