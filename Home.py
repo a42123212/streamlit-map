@@ -15,17 +15,18 @@ logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
 
 # Customize page title
-st.title("Streamlit for Geospatial Applications")
+st.title("YcHsu's Geo Disaster Demos")
 
 st.markdown(
     """
-    This multipage app template demonstrates various interactive web apps created using [streamlit](https://streamlit.io) and [leafmap](https://leafmap.org). It is an open-source project and you are very welcome to contribute to the [GitHub repository](https://github.com/opengeos/streamlit-map-template).
+    This multipage app demonstrates various interactive demos about geo disaster, which come from YcHsu's academic research. The website is an open-source project and you are very welcome to visit the [GitHub repository](https://github.com/a42123212/streamlit-map).
     """
 )
 
 st.header("Instructions")
 
 markdown = """
+The framwork about this website is based on [Open Geospatial Solutions](https://github.com/opengeos), which inspired me a lot. Below is the instructions about how to build a website like this.
 1. For the [GitHub repository](https://github.com/opengeos/streamlit-map-template) or [use it as a template](https://github.com/opengeos/streamlit-map-template/generate) for your own project.
 2. Customize the sidebar by changing the sidebar text and logo in each Python files.
 3. Find your favorite emoji from https://emojipedia.org.
